@@ -15,6 +15,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // define latitude and longitude
+        let latitude : CLLocationDegrees = 43.64
+        let longitude : CLLocationDegrees = -79.38
+        
+        
+        // define delta long and delta lat
+        let latDelta : CLLocationDegrees = 0.05
+        let longDelta : CLLocationDegrees = 0.05
+        
+        // define spam
+        let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
     }
 
 
