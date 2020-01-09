@@ -27,6 +27,25 @@ class ViewController: UIViewController {
         
         // define spam
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
+        
+        // define Location
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    
+        // define region
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        // set the region on the map
+        mapView.setRegion(region, animated: true)
+
+        //adding annotation for the map
+        // Used for pinning Location
+        let annotation = MKPointAnnotation()
+        annotation.title = "Toronto City"
+        annotation.subtitle = "Love"
+        annotation.coordinate = location
+        mapView.addAnnotation(annotation)
+    
+        
     }
 
 
